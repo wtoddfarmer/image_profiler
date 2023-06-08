@@ -263,8 +263,8 @@ def plot_heatmap(data, stain, crop=False):
     hm.set_title(stain + " profiles")
     return hm
 
-# function to plot per animal - no ci
 
+# function to plot per animal - no ci
 
 def trace_per_animal(data, stain):
     # TODO: make this function annotate regions of the dataset
@@ -335,44 +335,7 @@ def trace_per_animal_by_geno(data):
     return fig
 
 
-# region analysis function
-# This function needs to be made to accept any dataset
-"""
-def region_analysis(data, region, geno_loc):
-    # mean signal across region
-    for region in regions
-    
-        for geno in genos
-    region_wt = data[data['geno'] == 'Shh+/+'].iloc[:, regions[region]].mean(axis=1)
-    region_cc = data[data['geno'] == 'Shhc/c'].iloc[:, regions[region]].mean(axis=1)
-    print("t-test of mean across " + region)
-    plot dot plots for each geno in each region
-    output summary table
-    stat = stats.ttest_rel(region_wt, region_cc, axis=0)
-    print(stat)
-
-    # return bar graph with p value and print stats for repeated and mean for the region
-    bar = sns.barplot(y=data.iloc[:, regions[region]].mean(axis=1),
-                      x=data.iloc[:, geno_loc],
-                      ci='sd')
-    bar.set_title("mean fluorescence of " + region)
-    bar.text(0.5, 0.95,
-             "p=" + str(round(stat.pvalue, 3)),
-             horizontalalignment='center',
-             verticalalignment='center',
-             transform=bar.transAxes)
-    # repeated measures
-    # region_tom_rm = data[data['geno'] == 'Tom'].iloc[:, regions[region]]
-    # region_M2_rm = data[data['geno'] == 'SmoM2'].iloc[:, regions[region]]
-    # print("t-test of across " + region)
-    # print(stats.ttest_rel(region_tom_rm, region_M2_rm, axis=0))
-    return bar
-"""
-
-# scale data so that x axis is consistent
-
 # Function to compare regions
-
 
 def trace_per_region(data, stain):
     spy_start = -50
