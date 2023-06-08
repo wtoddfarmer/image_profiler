@@ -7,7 +7,7 @@ This code can be used on images like this:
 
 ![Laser scanning confocal image of the mouse hippocampus](images/lsm_image.png)
 
-And generate plot like this: 
+To generate plots like this: 
 
 ![Line plot of a single channel](images/trace.png)
 
